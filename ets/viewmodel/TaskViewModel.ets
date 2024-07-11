@@ -121,7 +121,7 @@ export const addTask = (params: TaskInfo, context: Context) => {
       });
     }
     TaskInfoApi.updateDataByDate(params, (flag: number) => {
-      if (!flag) {
+      if (flag) {//!flag->flag
         Logger.error('insertTaskSetting', 'updateTaskSetting Error!');
         reject(flag);
       }

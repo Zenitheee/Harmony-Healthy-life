@@ -20,6 +20,7 @@ export interface ITaskItem {
   taskID: number;
   taskName: Resource;
   isOpen: boolean;
+  isDone: boolean;
   unit: string;
   icon: Resource;
   dialogBg: Resource;
@@ -64,6 +65,7 @@ export const TaskMapById: Array<ITaskItem> = [
     dialogBg: $r('app.media.ic_dialog_getup'),
     targetValue: '08: 00',
     isOpen: false,
+    isDone: false,//add
     unit: '',
     step: 0,
     isInit: true,
@@ -79,6 +81,7 @@ export const TaskMapById: Array<ITaskItem> = [
     dialogBg: $r('app.media.ic_dialog_drink'),
     targetValue: '0.25',
     isOpen: false,
+    isDone: false,//add
     unit: 'L',
     step: 0,
     isInit: true,
@@ -94,6 +97,7 @@ export const TaskMapById: Array<ITaskItem> = [
     dialogBg: $r('app.media.ic_dialog_eat_apples'),
     targetValue: '1',
     isOpen: false,
+    isDone: false,//add
     unit: '个',
     step: 1,
     isInit: true,
@@ -109,6 +113,7 @@ export const TaskMapById: Array<ITaskItem> = [
     dialogBg: $r('app.media.ic_dialog_smile'),
     targetValue: '1',
     isOpen: false,
+    isDone: false,//add
     unit: '次',
     step: 0,
     isInit: true,
@@ -124,6 +129,7 @@ export const TaskMapById: Array<ITaskItem> = [
     dialogBg: $r('app.media.ic_dialog_brush_teeth'),
     targetValue: '1',
     isOpen: false,
+    isDone: false,
     unit: '次',
     step: 0,
     isInit: true,
@@ -139,6 +145,7 @@ export const TaskMapById: Array<ITaskItem> = [
     dialogBg: $r('app.media.ic_dialog_sleep'),
     targetValue: '20: 00',
     isOpen: false,
+    isDone: false,
     unit: '',
     step: 0,
     isInit: true,
