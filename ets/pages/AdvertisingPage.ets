@@ -28,13 +28,12 @@ struct AdvertisingPage {
   }
 
   aboutToAppear() {
-    //this.goToHomePage();
     this.intervalId = setInterval(() => {
-    //  if (this.duration > 0) {
-    //    this.duration -= 1;
-    //  } else {
+      if (this.duration > 0) {
+        this.duration -= 1;
+      } else {
         this.goToHomePage();
-    //  }
+      }
     }, Const.DURATION_1000)
   }
 
