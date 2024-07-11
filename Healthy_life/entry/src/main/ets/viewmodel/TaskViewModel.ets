@@ -242,7 +242,7 @@ export const createAppleRange = () => {
 export const createSmileAndBrushRange = () => {
   const smileAndBrushRangeArr: Array<string> = [];
   for (let i = 1; i <= Const.SMILE_AND_BRUSH_RANGE; i++) {
-    smileAndBrushRangeArr.push(`${i} 个`);
+    smileAndBrushRangeArr.push(`${i} 次`);
   }
   return smileAndBrushRangeArr;
 }
