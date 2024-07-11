@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a03f1a5-23a8-47db-b769-eb477ba24007" name="Changes" comment="" />
+    <list default="true" id="8a03f1a5-23a8-47db-b769-eb477ba24007" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +14,9 @@
   </component>
   <component name="FilterPreference">
     <option name="filterName" value="No filters" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,7 +35,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ace.nodejs.version": "18.20.1",
-    "last_opened_file_path": "D:/DevEcoStudioProjects/Healthy_life",
+    "last_opened_file_path": "D:/DevEcoStudioProjects/Harmony-Healthy-life/Healthy_life",
+    "projectSizeLastTraceTimestamp-02e2db40caa3e10d3fb0f439cd45bd7dfd338e76f9bfb04e98015927bd3f": "1720683793677",
     "projectSizeLastTraceTimestamp-2352e17d9b1edad6b9824e85c69199a481346d207d2e53ee28b395310609": "1720660340603",
     "resolution": "1080*2340",
     "run.code.analysis.last.selected.profile": "pProject Default",
