@@ -39,6 +39,7 @@ struct AdvertisingPage {
 
   build() {
     Column() {
+      /*
       Row() {
         Text($r('app.string.jump_ad', this.duration))
           .fontSize($r('app.float.default_12'))
@@ -54,7 +55,7 @@ struct AdvertisingPage {
       }
       .width('90%')
       .justifyContent(FlexAlign.End)
-
+      */
       Row() {
         Image($r('app.media.logo'))
           .width($r('app.float.default_56'))
@@ -87,6 +88,6 @@ struct AdvertisingPage {
     .backgroundImagePosition({ x: 0, y: 0 })
     .backgroundImage($r('app.media.ic_ad_bg'))
     .backgroundImageSize({ width: '100%', height: '100%' })
-    .justifyContent(FlexAlign.SpaceBetween)
+    .justifyContent(FlexAlign.End)
   }
 }
