@@ -1,10 +1,10 @@
 /*
  * Copyright (c) 2023 Huawei Device Co., Ltd.
- * Licensed under the Apache License,Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,74 +13,80 @@
  * limitations under the License.
  */
 
-import { TaskMapById } from '../../model/TaskInitList';
-import HealthText from '../../view/HealthTextComponent';
-import { CommonConstants as Const } from '../../common/constants/CommonConstants';
-import TaskInfo from '../../viewmodel/TaskInfo';
+import { router } from '@kit.ArkUI';
+import { CommonConstants as Const } from '../common/constants/CommonConstants';
 
-@Styles
-function allSize() {
-  .width(Const.THOUSANDTH_1000)
-  .height(Const.THOUSANDTH_1000)
-}
-
-@Extend(Text)
-function labelTextStyle() {
-  .fontSize($r('app.float.default_16'))
-  .fontWeight(Const.FONT_WEIGHT_500)
-  .opacity(Const.OPACITY_6)
-  .fontFamily($r('app.string.HarmonyHeiTi'))
-}
-
+@Entry
 @Component
-export struct TaskCard {
-  @Prop taskInfoStr: string = '';
-  clickAction: Function = (isClick: boolean) => {
-  };
-  @State taskInfo: TaskInfo = new TaskInfo(-1, '', -1, '', false, '', '', '', false, '', false);
+struct AdvertisingPage {
+  @State duration: number = Const.AD_DURATION;
+  private intervalId: number = -1;
 
-  aboutToAppear() {
-    this.taskInfo = JSON.parse(this.taskInfoStr);
+  goToHomePage() {
+    clearInterval(this.intervalId);
+    router.replaceUrl({ url: 'pages/MainPage' });
   }
 
-  @Builder
-  targetValueBuilder() {
-    if (this.taskInfo.isDone) {
-      HealthText({ title: '', titleResource: $r('app.string.task_done') })
-    } else {
-      Row() {
-        HealthText({
-          title: this.taskInfo.finValue || `--`,
-          fontSize: $r('app.float.default_24')
-        })
-        Text(` / ${this.taskInfo.targetValue} ${TaskMapById[this.taskInfo.taskID - 1].unit}`)
-          .labelTextStyle()
-          .fontWeight(Const.FONT_WEIGHT_400)
+  aboutToAppear() {
+    this.intervalId = setInterval(() => {
+      if (this.duration > 0) {
+        this.duration -= 1;
+      } else {
+        this.goToHomePage();
       }
-    }
+    }, Const.DURATION_1000)
   }
 
   build() {
-    Row() {
-      Row({ space: Const.DEFAULT_6 }) {
-        Image(TaskMapById[this.taskInfo.taskID - 1].icon)
-          .width($r('app.float.default_36')).height($r('app.float.default_36'))
-          .objectFit(ImageFit.Contain)
-        HealthText({
-          title: '',
-          titleResource: TaskMapById[this.taskInfo.taskID - 1].taskName,
-          fontFamily: $r('app.string.HarmonyHeiTi')
-        })
+    Column() {
+      Row() {
+        Text($r('app.string.jump_ad', this.duration))
+          .fontSize($r('app.float.default_12'))
+          .fontColor($r('app.color.white'))
+          .borderRadius($r('app.float.default_16'))
+          .letterSpacing(Const.LETTER_1)
+          .height($r('app.float.default_36'))
+          .backgroundColor('rgba(0,0,0,0.20)')
+          .border({ color: $r('app.color.white'), width: $r('app.float.default_1') })
+          .margin({ top: $r('app.float.default_36') })
+          .padding($r('app.float.default_8'))
+          .onClick(() => this.goToHomePage())
       }
+      .width('90%')
+      .justifyContent(FlexAlign.End)
 
-      this.targetValueBuilder();
+      Row() {
+        Image($r('app.media.logo'))
+          .width($r('app.float.default_56'))
+          .height($r('app.float.default_56'))
+          .objectFit(ImageFit.Contain)
+        Column({ space: Const.SPACE_4 }) {
+          Text($r('app.string.EntryAbility_label'))
+            .fontFamily($r('app.string.HarmonyHeiTi_Bold'))
+            .fontSize($r('app.float.default_26'))
+            .fontColor($r('app.color.titleColor'))
+            .fontWeight(Const.FONT_WEIGHT_700)
+            .letterSpacing(Const.LETTER_1)
+          Text($r('app.string.EntryAbility_desc'))
+            .fontFamily($r('app.string.HarmonyHeiTi'))
+            .fontColor($r('app.color.titleColor'))
+            .fontWeight(Const.FONT_WEIGHT_400)
+            .letterSpacing(Const.LETTER_34)
+            .opacity(Const.OPACITY_4)
+            .fontSize($r('app.float.default_16'))
+        }
+        .alignItems(HorizontalAlign.Start)
+        .margin({ left: $r('app.float.default_12') })
+      }
+      .height($r('app.float.default_100'))
+      .width('100%')
+      .justifyContent(FlexAlign.Center)
     }
-    .allSize()
+    .width('100%')
+    .height('100%')
+    .backgroundImagePosition({ x: 0, y: 0 })
+    .backgroundImage($r('app.media.ic_ad_bg'))
+    .backgroundImageSize({ width: '100%', height: '100%' })
     .justifyContent(FlexAlign.SpaceBetween)
-    .borderRadius($r('app.float.default_24'))
-    .padding({ left: Const.THOUSANDTH_50, right: Const.THOUSANDTH_33 })
-    .backgroundColor($r('app.color.white'))
-    .onClick(() => this.clickAction(true))
-    .gesture(LongPressGesture().onAction(() => this.clickAction(false)))
   }
 }
