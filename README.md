@@ -1,2 +1,1 @@
-原链接：https://developer.huawei.com/consumer/cn/codelabsPortal/carddetails/tutorials_NEXT-HealthyLife
-这是main，目前还是源码无改动
+基于V1版本（修完广告和任务添加bug）进行添加，添加了任务二中，每日微笑和喝水目标的设置功能、任务完成进度条、跑步一公里和月视图功能（有些bug没改完），登陆页面还未与数据库衔接，不想弄数据库（悲），实在不行就这样放着吧，目前不会直接出现在程序里，单独运行，输入任意账户可以跳转到程序主页。
