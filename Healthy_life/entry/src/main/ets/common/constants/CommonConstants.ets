@@ -44,6 +44,19 @@ export class CommonConstants {
       'isOpen'
     ]
   } as CommonConstantsInfo
+
+  /** user profile table **/
+  static readonly USER_PROFILE_INFO = {
+    tableName: 'userInfo',
+     columns: [
+      'userID',
+      'nickname',
+      'signature',
+      'gender',
+      'Height',
+      'Weight'
+    ]
+  } as CommonConstantsInfo
   /** form info table */
   static readonly FORM_INFO = {
     tableName: 'formInfo',
@@ -112,12 +125,16 @@ export class CommonConstants {
   // navigation title
   static readonly ADD_TASK_TITLE: string = '添加任务';
   static readonly EDIT_TASK_TITLE: string = '编辑任务';
+  static readonly EDIT_PROFILE_TITLE: string = '编辑个人资料';
+  static readonly PROFILE_DISPLAY: string = '个人资料展示';
   // prompt message
   static readonly SETTING_FINISHED_MESSAGE = '设置完成！！！';
   static readonly SETTING_FINISH_FAILED_MESSAGE = '网络连接错误';
   static readonly CHOOSE_TIME_OUT_RANGE: string = '选择时间超出范围';
   static readonly NICK_NAME = 'JoIin';
+  static readonly NICK_NAME_1 = 'huawei';
   static readonly SIGNATURE = '这是一条简短地个人签';
+  static readonly SIGNATURE_1 = 'I love Huawei';
   static readonly HOME_BTN_Z = 2;
   // time range
   static readonly DEFAULT_TIME: string = '08:00';

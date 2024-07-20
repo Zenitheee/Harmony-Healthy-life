@@ -101,8 +101,16 @@ export class TaskCard extends ViewPU {
             else {
                 this.ifElseBranchUpdateFunction(1, () => {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Progress.create({ value: 0, total: 1, type: ProgressType.Linear });
+                        Progress.debugLine("entry/src/main/ets/view/home/TaskCardComponent.ets(51:7)");
+                        Progress.width(100);
+                        Progress.height(50);
+                        Progress.value((parseInt(this.taskInfo.finValue)) / parseInt(this.taskInfo.targetValue));
+                        Progress.backgroundColor(Color.Grey);
+                    }, Progress);
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Row.create();
-                        Row.debugLine("entry/src/main/ets/view/home/TaskCardComponent.ets(51:7)");
+                        Row.debugLine("entry/src/main/ets/view/home/TaskCardComponent.ets(56:7)");
                     }, Row);
                     {
                         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -110,7 +118,7 @@ export class TaskCard extends ViewPU {
                                 let componentCall = new HealthText(ViewPU.__proto__ !== NativeViewPartialUpdate && parent instanceof PUV2ViewBase ? parent : this, {
                                     title: this.taskInfo.finValue || `--`,
                                     fontSize: { "id": 16777302, "type": 10002, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" }
-                                }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/home/TaskCardComponent.ets", line: 52 });
+                                }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/home/TaskCardComponent.ets", line: 57 });
                                 ViewPU.create(componentCall);
                                 let paramsLambda = () => {
                                     return {
@@ -129,7 +137,7 @@ export class TaskCard extends ViewPU {
                     }
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Text.create(` / ${this.taskInfo.targetValue} ${TaskMapById[this.taskInfo.taskID - 1].unit}`);
-                        Text.debugLine("entry/src/main/ets/view/home/TaskCardComponent.ets(56:9)");
+                        Text.debugLine("entry/src/main/ets/view/home/TaskCardComponent.ets(61:9)");
                         __Text__labelTextStyle();
                         Text.fontWeight(Const.FONT_WEIGHT_400);
                     }, Text);
@@ -143,7 +151,7 @@ export class TaskCard extends ViewPU {
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
-            Row.debugLine("entry/src/main/ets/view/home/TaskCardComponent.ets(64:5)");
+            Row.debugLine("entry/src/main/ets/view/home/TaskCardComponent.ets(69:5)");
             Row.width(Const.THOUSANDTH_1000);
             Row.height(Const.THOUSANDTH_1000);
             Row.justifyContent(FlexAlign.SpaceBetween);
@@ -159,11 +167,11 @@ export class TaskCard extends ViewPU {
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create({ space: Const.DEFAULT_6 });
-            Row.debugLine("entry/src/main/ets/view/home/TaskCardComponent.ets(65:7)");
+            Row.debugLine("entry/src/main/ets/view/home/TaskCardComponent.ets(70:7)");
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create(TaskMapById[this.taskInfo.taskID - 1].icon);
-            Image.debugLine("entry/src/main/ets/view/home/TaskCardComponent.ets(66:9)");
+            Image.debugLine("entry/src/main/ets/view/home/TaskCardComponent.ets(71:9)");
             Image.width({ "id": 16777307, "type": 10002, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
             Image.height({ "id": 16777307, "type": 10002, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
             Image.objectFit(ImageFit.Contain);
@@ -175,7 +183,7 @@ export class TaskCard extends ViewPU {
                         title: '',
                         titleResource: TaskMapById[this.taskInfo.taskID - 1].taskName,
                         fontFamily: { "id": 16777228, "type": 10003, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" }
-                    }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/home/TaskCardComponent.ets", line: 69 });
+                    }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/home/TaskCardComponent.ets", line: 74 });
                     ViewPU.create(componentCall);
                     let paramsLambda = () => {
                         return {

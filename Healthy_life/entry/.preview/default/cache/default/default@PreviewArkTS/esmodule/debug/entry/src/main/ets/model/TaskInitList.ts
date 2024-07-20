@@ -15,6 +15,7 @@ export interface ITaskItem {
     frequency: string;
     isInit: boolean;
     step: number;
+    isDone: boolean;
 }
 export interface RemindContentItem {
     title: string;
@@ -49,7 +50,8 @@ export const TaskMapById: Array<ITaskItem> = [
         isAlarm: false,
         startTime: '08: 00',
         endTime: '00: 00',
-        frequency: '1, 2, 3, 4, 5, 6, 7'
+        frequency: '1, 2, 3, 4, 5, 6, 7',
+        isDone: false
     },
     {
         taskID: 2,
@@ -64,7 +66,8 @@ export const TaskMapById: Array<ITaskItem> = [
         isAlarm: false,
         startTime: '08: 00',
         endTime: '00: 00',
-        frequency: '1, 2, 3, 4, 5, 6, 7'
+        frequency: '1, 2, 3, 4, 5, 6, 7',
+        isDone: false
     },
     {
         taskID: 3,
@@ -79,7 +82,8 @@ export const TaskMapById: Array<ITaskItem> = [
         isAlarm: false,
         startTime: '08: 00',
         endTime: '00: 00',
-        frequency: '1, 2, 3, 4, 5, 6, 7'
+        frequency: '1, 2, 3, 4, 5, 6, 7',
+        isDone: false
     },
     {
         taskID: 4,
@@ -94,7 +98,8 @@ export const TaskMapById: Array<ITaskItem> = [
         isAlarm: false,
         startTime: '08: 00',
         endTime: '00: 00',
-        frequency: '1, 2, 3, 4, 5, 6, 7'
+        frequency: '1, 2, 3, 4, 5, 6, 7',
+        isDone: false
     },
     {
         taskID: 5,
@@ -109,7 +114,8 @@ export const TaskMapById: Array<ITaskItem> = [
         isAlarm: false,
         startTime: '08: 00',
         endTime: '00: 00',
-        frequency: '1, 2, 3, 4, 5, 6, 7'
+        frequency: '1, 2, 3, 4, 5, 6, 7',
+        isDone: false
     },
     {
         taskID: 6,
@@ -124,7 +130,8 @@ export const TaskMapById: Array<ITaskItem> = [
         isAlarm: false,
         startTime: '08: 00',
         endTime: '00: 00',
-        frequency: '1, 2, 3, 4, 5, 6, 7'
+        frequency: '1, 2, 3, 4, 5, 6, 7',
+        isDone: false
     }
 ];
 export const TaskItem = new TaskInfo(1, '', 0, '7:00', true, 'string', 'string;', '', true, '6:58', false);
@@ -155,3 +162,12 @@ export const RemindContentMap: Array<RemindContentItem> = [
     }
 ];
 export const ACHIEVEMENT_LEVEL_LIST = [3, 7, 30, 50, 73, 99];
+export interface UserProfileItem {
+    userID: number;
+    nickname: string;
+    gender: string;
+    signature: string;
+    birthdate: string;
+    Height: string;
+    Weight: string;
+}

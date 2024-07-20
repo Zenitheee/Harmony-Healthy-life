@@ -21,9 +21,11 @@ import DayInfoApi from '../common/database/tables/DayInfoApi';
 import GlobalInfoApi from '../common/database/tables/GlobalInfoApi';
 import TaskInfoApi from '../common/database/tables/TaskInfoApi';
 import Logger from '../common/utils/Logger';
+import UserProfile from '../view/UserBaseInfo';
+import UserInfoApi from '../common/database/tables/UserInfoApi';
 
 export class DatabaseModel {
-  /**
+    /**
    * Init when open the app
    *
    * @param date
@@ -62,6 +64,28 @@ export class DatabaseModel {
       }
     });
   }
+
+  onInitDefaultUserInfo() {
+    // 导入默认用户信息
+    const defaultUser = new UserProfile(
+      Const.ZERO,
+      Const.NICK_NAME,
+      Const.SIGNATURE,
+      "Secret",
+      "2001年08月01日",
+      "185",
+      "140"
+    );
+
+    UserInfoApi.insertUserInfo(defaultUser, (result: number) => {
+      if (result) {
+        Logger.info('AppEntry', 'Default user inserted successfully');
+      } else {
+        Logger.error('AppEntry', 'Failed to insert default user');
+      }
+    });
+  }
+
 
   insertGlobalTask() {
     for (let i = 0; i < Const.TASK_NUM; i++) {

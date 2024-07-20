@@ -177,7 +177,7 @@ export struct FrequencyDialog {
   @Consume settingParams: ITaskItem;
   @Consume frequency: string;
   private controller: CustomDialogController = new CustomDialogController({ builder: '' });
-  private currentFrequency: string = Const.EVERYDAY;
+  private currentFrequency: string = this.frequency;
   private frequencyChooseRange: FrequencyContentType[] = frequencyRange();
 
   setFrequency() {
@@ -211,7 +211,10 @@ export struct FrequencyDialog {
           ListItem() {
             Row() {
               Text(item?.label).fontSize(Const.DEFAULT_20)
-              Toggle({ type: ToggleType.Checkbox })
+              Toggle({ type: ToggleType.Checkbox, isOn: this.currentFrequency.indexOf(item.label) != -1 })
+                .onDisAppear(() => {
+                  item.isChecked = this.currentFrequency.indexOf(item.label) != -1
+                })
                 .onChange((isOn) => {
                   item.isChecked = isOn;
                 })

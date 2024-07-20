@@ -30,7 +30,7 @@ class SplashIndex extends ViewPU {
                     confirm: () => {
                         this.onConfirm();
                     }
-                }, undefined, -1, () => { }, { page: "entry/src/main/ets/pages/SplashPage.ets", line: 32 });
+                }, undefined, -1, () => { }, { page: "entry/src/main/ets/pages/SplashPage.ets", line: 34 });
                 jsDialog.setController(this.dialogController);
                 ViewPU.create(jsDialog);
                 let paramsLambda = () => {
@@ -112,7 +112,7 @@ class SplashIndex extends ViewPU {
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
-            Column.debugLine("entry/src/main/ets/pages/SplashPage.ets(90:5)");
+            Column.debugLine("entry/src/main/ets/pages/SplashPage.ets(92:5)");
             Column.width('100%');
             Column.height('100%');
             Column.backgroundImagePosition({ x: 0, y: 0 });
@@ -121,14 +121,14 @@ class SplashIndex extends ViewPU {
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create({ "id": 16777280, "type": 20000, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
-            Image.debugLine("entry/src/main/ets/pages/SplashPage.ets(91:7)");
+            Image.debugLine("entry/src/main/ets/pages/SplashPage.ets(93:7)");
             Image.width({ "id": 16777294, "type": 10002, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
             Image.aspectRatio(1);
             Image.margin({ top: { "id": 16777294, "type": 10002, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" } });
         }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create({ "id": 16777225, "type": 10003, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
-            Text.debugLine("entry/src/main/ets/pages/SplashPage.ets(95:7)");
+            Text.debugLine("entry/src/main/ets/pages/SplashPage.ets(97:7)");
             Text.fontFamily({ "id": 16777229, "type": 10003, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
             Text.fontSize({ "id": 16777302, "type": 10002, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
             Text.fontColor({ "id": 16777362, "type": 10001, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
@@ -142,7 +142,7 @@ class SplashIndex extends ViewPU {
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create({ "id": 16777224, "type": 10003, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
-            Text.debugLine("entry/src/main/ets/pages/SplashPage.ets(105:7)");
+            Text.debugLine("entry/src/main/ets/pages/SplashPage.ets(107:7)");
             Text.fontFamily({ "id": 16777228, "type": 10003, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
             Text.fontColor({ "id": 16777362, "type": 10001, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
             Text.fontWeight(Const.FONT_WEIGHT_400);

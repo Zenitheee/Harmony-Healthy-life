@@ -102,7 +102,7 @@ export default class TaskDetail extends ViewPU {
     finishTaskEdit() {
         if (this.isChanged) {
             let context: Context = getContext(this) as common.Context;
-            let taskInfo: TaskInfo = new TaskInfo(Const.ZERO, Const.GLOBAL_KEY, this.settingParams.taskID, this.settingParams.targetValue, this.settingParams.isAlarm, this.settingParams.startTime, this.settingParams.endTime, this.settingParams.frequency, false, '', this.settingParams.isOpen);
+            let taskInfo: TaskInfo = new TaskInfo(Const.ZERO, Const.GLOBAL_KEY, this.settingParams.taskID, this.settingParams.targetValue, this.settingParams.isAlarm, this.settingParams.startTime, this.settingParams.endTime, this.settingParams.frequency, this.settingParams.isDone, '', this.settingParams.isOpen);
             addTask(taskInfo, context).then((res: number) => {
                 GlobalContext.getContext().setObject('taskListChange', true);
                 router.back({

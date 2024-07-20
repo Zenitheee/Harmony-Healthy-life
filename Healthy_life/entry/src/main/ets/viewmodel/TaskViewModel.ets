@@ -21,6 +21,10 @@ import { padTo2Digits } from '../common/utils/Utils';
 import TaskInfo, { oneWeek } from './TaskInfo';
 import { TaskMapById, RemindContentMap, ITaskItem } from '../model/TaskInitList';
 import PublishReminderInfo from './PublishReminderInfo';
+import UserProfile  from '../view/UserBaseInfo';
+import { UserProfileItem } from '../model/TaskInitList'
+import UserInfoApi from '../common/database/tables/UserInfoApi';
+
 
 const publishReminder = reminder.publishReminder;
 const cancelReminder = reminder.cancelReminder;
@@ -115,7 +119,7 @@ export const addTask = (params: TaskInfo, context: Context) => {
       }
     } else {
       isHasNotificationId(params?.taskID).then((flag: boolean) => {
-        if (flag) {
+        if (!flag) {
           useCancelReminder(params.taskID, context);
         }
       });
@@ -130,10 +134,30 @@ export const addTask = (params: TaskInfo, context: Context) => {
     let taskInfoStr = JSON.stringify(params);
     let taskInfo: TaskInfo = JSON.parse(taskInfoStr);
     taskInfo.date = new Date().toDateString();
-    taskInfo.isDone = true;
+    taskInfo.isDone = false;
     TaskInfoApi.updateDataByDate(taskInfo, (flag: number) => {
-      if (!flag) {
+      if (flag) {
         Logger.error('insertTaskSetting', 'updateTaskSetting Error!');
+        reject(flag);
+      }
+      resolve(flag);
+    });
+  });
+}
+
+
+export const updateProfile = (params: UserProfile) => {
+  if (!params) {
+    Logger.error('update profile', 'params is null!');
+    return new Promise<number>((resolve) => {
+      resolve(-1);
+    });
+  }
+  return new Promise<number>(async (resolve, reject) => {
+    Logger.info('TaskViewModel', 'update profile');
+    UserInfoApi.updateUserProfile(params, (flag: number) => {
+      if (!flag) {
+        Logger.error('updateProfile Error!');
         reject(flag);
       }
       resolve(flag);
@@ -169,6 +193,10 @@ export const taskIndexDataInit = (taskInitList: ITaskItem[], taskInfoData: TaskI
  */
 export const formatParams = (params: ITaskItem) => {
   return JSON.stringify(params);
+}
+
+export const formatParams_Profile =  (params: UserProfileItem) => {
+  return JSON.stringify(params)
 }
 
 /**
@@ -246,3 +274,10 @@ export const createSmileAndBrushRange = () => {
   }
   return smileAndBrushRangeArr;
 }
+
+export const genderRange = () => {
+  const genderRangeArr: Array<string> = ['男', '女', '保密']
+  return genderRangeArr;
+}
+
+

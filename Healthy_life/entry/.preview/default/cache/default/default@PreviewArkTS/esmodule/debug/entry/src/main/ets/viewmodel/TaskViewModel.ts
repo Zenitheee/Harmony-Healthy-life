@@ -8,6 +8,9 @@ import type TaskInfo from "@bundle:com.example.healthy_life/entry/ets/viewmodel/
 import { TaskMapById, RemindContentMap } from "@bundle:com.example.healthy_life/entry/ets/model/TaskInitList";
 import type { ITaskItem } from "@bundle:com.example.healthy_life/entry/ets/model/TaskInitList";
 import PublishReminderInfo from "@bundle:com.example.healthy_life/entry/ets/viewmodel/PublishReminderInfo";
+import type UserProfile from '../view/UserBaseInfo';
+import type { UserProfileItem } from "@bundle:com.example.healthy_life/entry/ets/model/TaskInitList";
+import UserInfoApi from "@bundle:com.example.healthy_life/entry/ets/common/database/tables/UserInfoApi";
 const publishReminder = reminder.publishReminder;
 const cancelReminder = reminder.cancelReminder;
 const hasNotificationId = reminder.hasNotificationId;
@@ -99,7 +102,7 @@ export const addTask = (params: TaskInfo, context: Context) => {
         }
         else {
             isHasNotificationId(params?.taskID).then((flag: boolean) => {
-                if (flag) {
+                if (!flag) {
                     useCancelReminder(params.taskID, context);
                 }
             });
@@ -114,10 +117,38 @@ export const addTask = (params: TaskInfo, context: Context) => {
         let taskInfoStr = JSON.stringify(params);
         let taskInfo: TaskInfo = JSON.parse(taskInfoStr);
         taskInfo.date = new Date().toDateString();
-        taskInfo.isDone = true;
+        taskInfo.isDone = false;
         TaskInfoApi.updateDataByDate(taskInfo, (flag: number) => {
-            if (!flag) {
+            if (flag) {
                 Logger.error('insertTaskSetting', 'updateTaskSetting Error!');
+                reject(flag);
+            }
+            resolve(flag);
+        });
+    });
+};
+export const updateProfile = (params: UserProfile) => {
+    if (!params) {
+        Logger.error('update profile', 'params is null!');
+        return new Promise<number>((resolve) => {
+            resolve(-1);
+        });
+    }
+    return new Promise<number>(async (resolve, reject) => {
+        Logger.info('TaskViewModel', 'update profile');
+        UserInfoApi.updateUserProfile(params, (flag: number) => {
+            if (!flag) {
+                Logger.error('updateProfile Error!');
+                reject(flag);
+            }
+            resolve(flag);
+        });
+        let userInfoStr = JSON.stringify(params);
+        let userInfo: UserProfile = JSON.parse(userInfoStr);
+        userInfo.birthdate = new Date().toDateString();
+        UserInfoApi.updateUserProfile(userInfo, (flag: number) => {
+            if (!flag) {
+                Logger.error('updateProfile Error!');
                 reject(flag);
             }
             resolve(flag);
@@ -150,6 +181,9 @@ export const taskIndexDataInit = (taskInitList: ITaskItem[], taskInfoData: TaskI
  * @param params = {}
  */
 export const formatParams = (params: ITaskItem) => {
+    return JSON.stringify(params);
+};
+export const formatParams_Profile = (params: UserProfileItem) => {
     return JSON.stringify(params);
 };
 /**
@@ -218,7 +252,11 @@ export const createAppleRange = () => {
 export const createSmileAndBrushRange = () => {
     const smileAndBrushRangeArr: Array<string> = [];
     for (let i = 1; i <= Const.SMILE_AND_BRUSH_RANGE; i++) {
-        smileAndBrushRangeArr.push(`${i} 个`);
+        smileAndBrushRangeArr.push(`${i} 次`);
     }
     return smileAndBrushRangeArr;
+};
+export const genderRange = () => {
+    const genderRangeArr: Array<string> = ['男', '女', '保密'];
+    return genderRangeArr;
 };

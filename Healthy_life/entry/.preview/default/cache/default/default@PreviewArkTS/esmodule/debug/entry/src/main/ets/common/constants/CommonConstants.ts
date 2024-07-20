@@ -28,6 +28,18 @@ export class CommonConstants {
             'isOpen'
         ]
     } as CommonConstantsInfo;
+    /** user profile table **/
+    static readonly USER_PROFILE_INFO = {
+        tableName: 'userInfo',
+        columns: [
+            'userID',
+            'nickname',
+            'signature',
+            'gender',
+            'Height',
+            'Weight'
+        ]
+    } as CommonConstantsInfo;
     /** form info table */
     static readonly FORM_INFO = {
         tableName: 'formInfo',
@@ -93,6 +105,7 @@ export class CommonConstants {
     // navigation title
     static readonly ADD_TASK_TITLE: string = '添加任务';
     static readonly EDIT_TASK_TITLE: string = '编辑任务';
+    static readonly EDIT_PROFILE_TITLE: string = '编辑个人资料';
     // prompt message
     static readonly SETTING_FINISHED_MESSAGE = '设置完成！！！';
     static readonly SETTING_FINISH_FAILED_MESSAGE = '网络连接错误';

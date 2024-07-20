@@ -13,10 +13,32 @@
  * limitations under the License.
  */
 
+export default class UserProfile {
+  userID: number;
+  nickname: string;
+  gender: string;
+  signature: string;
+  birthdate: string;
+  Height: string;
+  Weight: string;
+
+  constructor(userID: number, nickname: string, gender: string, signature: string,
+    birthdate: string, Height: string, Weight: string) {
+    this.userID = userID;
+    this.nickname = nickname;
+    this.gender = gender;
+    this.signature = signature;
+    this.birthdate = birthdate;
+    this.Height = Height;
+    this.Weight = Weight;
+  }
+}
+
+
 @Component
 export struct UserBaseInfo {
-  @Prop nickname: string = '';
-  @Prop signature: string = '';
+  @State nickname: string = '';
+  @State signature: string = '';
 
   build() {
     Column() {

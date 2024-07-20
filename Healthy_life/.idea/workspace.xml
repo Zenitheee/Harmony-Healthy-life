@@ -5,44 +5,173 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a03f1a5-23a8-47db-b769-eb477ba24007" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.2024-07-19.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.hvigor/report/report-202407201113178920.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.hvigor/report/report-202407201116271800.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.hvigor/report/report-202407201148471610.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.hvigor/report/report-202407201156014610.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.hvigor/report/report-202407201204341280.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.hvigor/report/report-202407201457572330.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.hvigor/report/report-202407201806398880.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.hvigor/report/report-202407201809466600.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.hvigor/report/report-202407201810526760.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.hvigor/report/report-202407201830095120.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/common/database/tables/UserInfoApi.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/AboutPage.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/CheckUpdatesPage.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/ProfileDisplayPage.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/ProfileEditPage.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/test/1.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/view/EditProfile/ProfileDetailComponent.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/view/EditProfile/ProfileEditListItem.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/view/dialog/BirthDateEditDialog.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/view/dialog/GenderEditDialog.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/view/dialog/ProfileDialogView.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/cache/file-cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/cache/file-cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/cache/task-cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/cache/task-cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/logs/details/details.json" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/logs/details/details.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/sync/fileCache.json" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/sync/fileCache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/report/report-202407111558187590.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/previewer/previewConfigV2.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/previewer/previewConfigV2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/config/buildConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/config/buildConfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/.tsbuildinfo.linter" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/.tsbuildinfo.linter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/ResourceTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/ResourceTable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/compiler.cache.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/compiler.cache.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/constants/CommonConstants.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/constants/CommonConstants.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/constants/CommonConstants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/constants/CommonConstants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/database/rdb/RdbUtils.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/database/rdb/RdbUtils.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/database/rdb/RdbUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/database/rdb/RdbUtils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/database/tables/TaskInfoApi.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/database/tables/TaskInfoApi.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/database/tables/TaskInfoApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/database/tables/TaskInfoApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/utils/BroadCast.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/utils/BroadCast.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/utils/BroadCast.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/common/utils/BroadCast.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/model/DatabaseModel.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/model/DatabaseModel.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/model/DatabaseModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/model/DatabaseModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/model/TaskInitList.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/model/TaskInitList.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/model/TaskInitList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/model/TaskInitList.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/pages/MinePage.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/pages/MinePage.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/pages/MinePage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/pages/MinePage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/pages/SplashPage.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/pages/SplashPage.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/pages/SplashPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/pages/SplashPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/ListInfo.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/ListInfo.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/ListInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/ListInfo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/UserBaseInfo.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/UserBaseInfo.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/UserBaseInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/UserBaseInfo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/dialog/TaskDialogView.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/dialog/TaskDialogView.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/dialog/TaskDialogView.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/dialog/TaskDialogView.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/dialog/TaskSettingDialog.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/dialog/TaskSettingDialog.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/dialog/TaskSettingDialog.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/dialog/TaskSettingDialog.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/home/TaskCardComponent.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/home/TaskCardComponent.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/home/TaskCardComponent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/home/TaskCardComponent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/task/TaskDetailComponent.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/task/TaskDetailComponent.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/task/TaskDetailComponent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/view/task/TaskDetailComponent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/BroadCastCallBackInfo.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/BroadCastCallBackInfo.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/BroadCastCallBackInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/BroadCastCallBackInfo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/HomeViewModel.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/HomeViewModel.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/HomeViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/HomeViewModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/TaskViewModel.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/TaskViewModel.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/TaskViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/entry/src/main/ets/viewmodel/TaskViewModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/filesInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/filesInfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/modules.cache" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/modules.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/sourceMaps.json" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/sourceMaps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/watch_logs.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/watch_logs.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/watchCompiler.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/cache/default/default@PreviewArkTS/esmodule/watchCompiler.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/generated/r/default/ResourceTable.h" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/generated/r/default/ResourceTable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/intermediates/assets/default/ets/modules.abc" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/intermediates/assets/default/ets/modules.abc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/intermediates/assets/default/ets/sourceMaps.map" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/intermediates/assets/default/ets/sourceMaps.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/intermediates/res/default/ResourceTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/intermediates/res/default/ResourceTable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/intermediates/res/default/ids_map/id_defined.json" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/intermediates/res/default/ids_map/id_defined.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/intermediates/res/default/module_compiled/11070800465771960169" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/intermediates/res/default/module_compiled/11070800465771960169" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/intermediates/res/default/resources.index" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/intermediates/res/default/resources.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/.preview/default/intermediates/res/default/resources/base/profile/main_pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/entry/.preview/default/intermediates/res/default/resources/base/profile/main_pages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/common/constants/CommonConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/common/constants/CommonConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/common/database/rdb/RdbUtils.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/common/database/rdb/RdbUtils.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/common/database/tables/TaskInfoApi.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/common/database/tables/TaskInfoApi.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/common/utils/BroadCast.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/common/utils/BroadCast.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/model/DatabaseModel.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/model/DatabaseModel.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/model/TaskInitList.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/model/TaskInitList.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/MinePage.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/MinePage.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/SplashPage.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/SplashPage.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/view/ListInfo.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/view/ListInfo.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/view/UserBaseInfo.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/view/UserBaseInfo.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/view/dialog/CustomDialogView.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/view/dialog/CustomDialogView.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/view/dialog/TaskDialogView.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/view/dialog/TaskDialogView.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/view/dialog/TaskSettingDialog.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/view/dialog/TaskSettingDialog.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/view/home/TaskCardComponent.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/view/home/TaskCardComponent.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/view/task/TaskDetailComponent.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/view/task/TaskDetailComponent.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/viewmodel/BroadCastCallBackInfo.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/viewmodel/BroadCastCallBackInfo.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/viewmodel/HomeViewModel.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/viewmodel/HomeViewModel.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/viewmodel/TaskViewModel.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/viewmodel/TaskViewModel.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/resources/base/element/string.json" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/resources/base/element/string.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/resources/base/profile/main_pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/resources/base/profile/main_pages.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="ArkTS File" />
+      </list>
+    </option>
+  </component>
   <component name="FilterPreference">
-    <option name="filterName" value="No filters" />
+    <option name="filterName" value="User logs of selected app" />
+    <option name="processName" value="com.example.healthy_life" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/entry/src/main/ets/pages/EditProfilePage.ets" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2izvd3pgbkypkVXq3aP9UHsrzJ1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "127.0.0.1:5555": "537299878",
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.entry.executor": "Run",
+    "MODULE_HAP_TIME": "{\"127.0.0.1:5555entry\":\"2024-07-20T10:31:04.414377300Z\"}",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ace.nodejs.version": "18.20.1",
     "last_opened_file_path": "D:/DevEcoStudioProjects/Harmony-Healthy-life/Healthy_life",
-    "projectSizeLastTraceTimestamp-02e2db40caa3e10d3fb0f439cd45bd7dfd338e76f9bfb04e98015927bd3f": "1720683793677",
+    "projectSizeLastTraceTimestamp-02e2db40caa3e10d3fb0f439cd45bd7dfd338e76f9bfb04e98015927bd3f": "1721376372444",
     "projectSizeLastTraceTimestamp-2352e17d9b1edad6b9824e85c69199a481346d207d2e53ee28b395310609": "1720660340603",
     "resolution": "1080*2340",
     "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "shape": "phone"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\DevEcoStudioProjects\Harmony-Healthy-life\Healthy_life\entry\src\main\ets\view\EditProfile" />
+      <recent name="D:\DevEcoStudioProjects\Harmony-Healthy-life\Healthy_life\entry\src\main\ets\pages" />
+      <recent name="D:\DevEcoStudioProjects\Harmony-Healthy-life\Healthy_life\entry\src\main\ets\view\dialog" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.entry">
     <configuration name="entry" type="HotReLoadTask" factoryName="Hot Reload">
       <MODULE_NAME />
@@ -99,16 +228,10 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="JavaScript">
-          <url>file://$PROJECT_DIR$/entry/src/main/ets/viewmodel/TaskViewModel.ets</url>
-          <line>122</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="entry">
         <watch expression="context" />

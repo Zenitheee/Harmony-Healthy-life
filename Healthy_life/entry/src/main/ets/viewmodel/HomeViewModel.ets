@@ -28,6 +28,8 @@ import Logger from '../common/utils/Logger';
 import GlobalInfo from './GlobalInfo';
 import WeekCalendarInfo from './WeekCalendarInfo';
 import AchievementInfo from './AchievementInfo';
+import UserProfile from '../view/UserBaseInfo';
+import UserInfoApi from '../common/database/tables/UserInfoApi';
 
 @Observed
 export class HomeStore {
@@ -51,6 +53,7 @@ export class HomeStore {
     Logger.info('this.currentDate', this.currentDate.toDateString());
     Logger.info('initWeekData dateArr', JSON.stringify(weekCalendarInfo.strArr))
     // get data form db
+    DatabaseApi.onInitDefaultUserInfo();
     DatabaseApi.query(dateToStr(new Date()), (taskList: TaskInfo[], dayInfo: DayInfo) => {
       Logger.info('Current Day Task Info: ', JSON.stringify(taskList));
       DayInfoApi.queryList(weekCalendarInfo.strArr, (res: DayInfo[]) => {
@@ -251,7 +254,7 @@ export class HomeStore {
       let step = TaskMapById[taskID - 1].step;
       let hasExceed = updateTask.isDone;
       if (step === 0) {
-        updateTask.isDone = true;
+        updateTask.isDone = false;
         updateTask.finValue = targetValue;
       } else {
         let value = Number(finValue) + step;

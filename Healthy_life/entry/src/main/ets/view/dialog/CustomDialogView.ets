@@ -47,6 +47,8 @@ export struct CustomDialogView {
     customStyle: true
   });
 
+
+
   aboutToAppear() {
     Logger.debug('CustomDialogView', 'aboutToAppear');
     // achievement dialog

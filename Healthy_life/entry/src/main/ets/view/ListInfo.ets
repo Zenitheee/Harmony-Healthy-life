@@ -14,9 +14,19 @@
  */
 
 import { MineInfoList, InfoItem } from '../model/Mine';
+import { router } from '@kit.ArkUI';
+import { UserProfileItem } from '../model/TaskInitList';
 
 @Component
 export struct ListInfo {
+  @Link userID: number;
+  @Link nickname: string;
+  @Link signature: string;
+  @Link gender: string;
+  @Link birthdate: string;
+  @Link Height: string;
+  @Link Weight: string;
+
   build() {
     List() {
       ForEach(MineInfoList, (item: InfoItem) => {
@@ -30,6 +40,31 @@ export struct ListInfo {
               .width($r('app.float.default_7'))
           }
         }
+        .onClick(() => {
+          if (item.id === '1') {    // 跳转到个人资料展示页面
+            const profile: UserProfileItem = {
+              userID: this.userID,
+              nickname: this.nickname,
+              signature: this.signature,
+              gender: this.gender,
+              birthdate: this.birthdate,
+              Height: this.Height,
+              Weight: this.Weight
+            };
+            router.pushUrl({
+              url: 'pages/ProfileDisplayPage',
+              params: profile,
+            });
+          } else if (item.id === '2') {
+            router.pushUrl({
+              url: 'pages/CheckUpdatesPage'
+            });
+          } else {
+            router.pushUrl({
+              url: 'pages/AboutPage'
+            });
+          }
+        })
         .backgroundColor($r('app.color.white'))
         .margin({
           left: $r('app.float.default_24'),

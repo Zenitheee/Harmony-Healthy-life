@@ -1,1 +1,1 @@
-[{"time":"2024-07-11T07:59:22.282Z","category":"etsChecker","level":"warn","msg":"\u001b[33mArkTS:WARN File: D:/DevEcoStudioProjects/Harmony-Healthy-life/Healthy_life/entry/src/main/ets/view/HomeComponent.ets:162:8\n 'onScroll' has been deprecated.\n","type":"plugin_log"}]
+[{"time":"2024-07-20T03:31:41.953Z","category":"etsChecker","level":"warn","msg":"\u001b[33mArkTS:WARN File: D:/DevEcoStudioProjects/Harmony-Healthy-life/Healthy_life/entry/src/main/ets/view/HomeComponent.ets:162:8\n 'onScroll' has been deprecated.\n","type":"plugin_log"}]

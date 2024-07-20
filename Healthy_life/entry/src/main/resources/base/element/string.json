@@ -105,6 +105,38 @@
       "value": "目标设置"
     },
     {
+      "name": "edit_nickname",
+      "value": "编辑昵称"
+    },
+    {
+      "name": "edit_signature",
+      "value":"编辑个性签名"
+    },
+    {
+      "name": "birthdate",
+      "value": "出生日期"
+    },
+    {
+      "name": "gender",
+      "value": "性别"
+    },
+    {
+      "name": "edit_birthdate",
+      "value": "出生日期: "
+    },
+    {
+      "name": "edit_gender",
+      "value": "性别: "
+    },
+    {
+      "name": "edit_height",
+      "value": "身高(厘米)"
+    },
+    {
+      "name": "edit_weight",
+      "value": "体重(斤)"
+    },
+    {
       "name": "open_reminder",
       "value": "开启提醒"
     },
@@ -119,6 +151,14 @@
     {
       "name": "complete",
       "value": "完成"
+    },
+    {
+      "name": "backup",
+      "value": "返回"
+    },
+    {
+      "name": "change",
+      "value": "更改"
     },
     {
       "name": "cancel",

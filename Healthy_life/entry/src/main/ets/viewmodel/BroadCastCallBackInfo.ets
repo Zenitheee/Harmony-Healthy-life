@@ -22,4 +22,7 @@ export default class BroadCastCallBackInfo {
    showTargetSettingDialog: Function = () => {};
    showRemindTimeDialog: Function = () => {};
    showFrequencyDialog: Function = () => {};
+   showEditProfileDialog: Function = () => {};
+   showEditGenderDialog: Function = () => {};
+   showEditBirthdateDialog: Function = () => {};
 }

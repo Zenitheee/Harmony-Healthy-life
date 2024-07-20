@@ -48,6 +48,11 @@ export struct TaskCard {
     if (this.taskInfo.isDone) {
       HealthText({ title: '', titleResource: $r('app.string.task_done') })
     } else {
+      Progress({value:0, total:1, type: ProgressType.Linear})
+        .width(100)
+        .height(50)
+        .value((parseInt(this.taskInfo.finValue)) / parseInt(this.taskInfo.targetValue))
+        .backgroundColor(Color.Grey)
       Row() {
         HealthText({
           title: this.taskInfo.finValue || `--`,

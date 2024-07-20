@@ -19,6 +19,8 @@ import { preferences } from '@kit.ArkData';
 import Logger from '../common/utils/Logger';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 import UserPrivacyDialog from '../view/dialog/UserPrivacyDialog';
+import UserProfile from '../view/UserBaseInfo';
+import UserInfoApi from '../common/database/tables/UserInfoApi';
 
 // app preferences name
 const H_STORE: string = 'healthAppStore';

@@ -49,6 +49,8 @@ export struct TaskDialogView {
     offset: { dx: Const.ZERO, dy: Const.MINUS_20 }
   });
 
+  //
+
   aboutToAppear() {
     Logger.debug('CustomDialogView', 'aboutToAppear');
 

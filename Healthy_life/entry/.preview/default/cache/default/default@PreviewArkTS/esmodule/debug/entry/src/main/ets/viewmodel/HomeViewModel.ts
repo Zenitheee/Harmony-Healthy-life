@@ -225,7 +225,7 @@ export class HomeStore {
             let step = TaskMapById[taskID - 1].step;
             let hasExceed = updateTask.isDone;
             if (step === 0) {
-                updateTask.isDone = true;
+                updateTask.isDone = false;
                 updateTask.finValue = targetValue;
             }
             else {

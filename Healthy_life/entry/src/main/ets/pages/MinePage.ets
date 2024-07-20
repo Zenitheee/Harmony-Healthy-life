@@ -14,13 +14,21 @@
  */
 
 import { ListInfo } from '../view/ListInfo';
-import { UserBaseInfo } from '../view/UserBaseInfo';
+import UserProfile, { UserBaseInfo } from '../view/UserBaseInfo';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
+import UserInfoApi from '../common/database/tables/UserInfoApi';
+import Logger from '../common/utils/Logger';
+
 
 @Component
 export struct MineIndex {
   @State nickname: string = Const.NICK_NAME;
   @State signature: string = Const.SIGNATURE;
+  @State userID: number = Const.ZERO;
+  @State gender: string = '保密';
+  @State birthdate: string = '2001年08月01日';
+  @State Height: string = '185';
+  @State Weight: string = '140';
 
   build() {
     Column() {
@@ -29,9 +37,17 @@ export struct MineIndex {
         signature: this.signature
       });
 
-      ListInfo();
+      ListInfo({
+        nickname: this.nickname,
+        signature: this.signature,
+        userID: this.userID,
+        gender: this.gender,
+        birthdate: this.birthdate,
+        Height: this.Height,
+        Weight: this.Weight
+      })
+        .height(Const.FULL_HEIGHT)
+        .backgroundColor($r('app.color.mineBgColor'))
     }
-    .height(Const.FULL_HEIGHT)
-    .backgroundColor($r('app.color.mineBgColor'))
   }
 }

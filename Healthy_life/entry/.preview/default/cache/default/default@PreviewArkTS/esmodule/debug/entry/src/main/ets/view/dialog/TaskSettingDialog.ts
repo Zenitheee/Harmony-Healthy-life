@@ -356,7 +356,7 @@ export class FrequencyDialog extends ViewPU {
         this.controller = new CustomDialogController({
             builder: ''
         }, this);
-        this.currentFrequency = Const.EVERYDAY;
+        this.currentFrequency = this.frequency;
         this.frequencyChooseRange = frequencyRange();
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
@@ -485,8 +485,11 @@ export class FrequencyDialog extends ViewPU {
                         }, Text);
                         Text.pop();
                         this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            Toggle.create({ type: ToggleType.Checkbox });
+                            Toggle.create({ type: ToggleType.Checkbox, isOn: this.currentFrequency.indexOf(item.label) != -1 });
                             Toggle.debugLine("entry/src/main/ets/view/dialog/TaskSettingDialog.ets(214:15)");
+                            Toggle.onDisAppear(() => {
+                                item.isChecked = this.currentFrequency.indexOf(item.label) != -1;
+                            });
                             Toggle.onChange((isOn) => {
                                 item.isChecked = isOn;
                             });
@@ -505,7 +508,7 @@ export class FrequencyDialog extends ViewPU {
         List.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
-            Row.debugLine("entry/src/main/ets/view/dialog/TaskSettingDialog.ets(233:7)");
+            Row.debugLine("entry/src/main/ets/view/dialog/TaskSettingDialog.ets(236:7)");
             Row.justifyContent(FlexAlign.SpaceAround);
             Row.width(Const.THOUSANDTH_900);
             Row.height(Const.DEFAULT_28);
@@ -513,7 +516,7 @@ export class FrequencyDialog extends ViewPU {
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create({ "id": 16777239, "type": 10003, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
-            Text.debugLine("entry/src/main/ets/view/dialog/TaskSettingDialog.ets(234:9)");
+            Text.debugLine("entry/src/main/ets/view/dialog/TaskSettingDialog.ets(237:9)");
             Text.fontSize(Const.DEFAULT_20);
             Text.fontColor({ "id": 16777341, "type": 10001, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
             Text.onClick(() => {
@@ -523,7 +526,7 @@ export class FrequencyDialog extends ViewPU {
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create({ "id": 16777242, "type": 10003, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
-            Text.debugLine("entry/src/main/ets/view/dialog/TaskSettingDialog.ets(239:9)");
+            Text.debugLine("entry/src/main/ets/view/dialog/TaskSettingDialog.ets(242:9)");
             Text.fontSize(Const.DEFAULT_20);
             Text.fontColor({ "id": 16777341, "type": 10001, params: [], "bundleName": "com.example.healthy_life", "moduleName": "entry" });
             Text.onClick(() => {

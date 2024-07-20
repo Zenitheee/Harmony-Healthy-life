@@ -6,13 +6,15 @@ import DayInfoApi from "@bundle:com.example.healthy_life/entry/ets/common/databa
 import GlobalInfoApi from "@bundle:com.example.healthy_life/entry/ets/common/database/tables/GlobalInfoApi";
 import TaskInfoApi from "@bundle:com.example.healthy_life/entry/ets/common/database/tables/TaskInfoApi";
 import Logger from "@bundle:com.example.healthy_life/entry/ets/common/utils/Logger";
+import UserProfile from "@bundle:com.example.healthy_life/entry/ets/view/UserBaseInfo";
+import UserInfoApi from "@bundle:com.example.healthy_life/entry/ets/common/database/tables/UserInfoApi";
 export class DatabaseModel {
     /**
-     * Init when open the app
-     *
-     * @param date
-     * @param callback
-     */
+   * Init when open the app
+   *
+   * @param date
+   * @param callback
+   */
     query(date: string, callback: Function) {
         let result: TaskInfo[] = [];
         let self = this;
@@ -44,6 +46,18 @@ export class DatabaseModel {
                     }
                 });
                 self.queryPreInfo(date, preDate, result, callback);
+            }
+        });
+    }
+    onInitDefaultUserInfo() {
+        // 导入默认用户信息
+        const defaultUser = new UserProfile(Const.ZERO, Const.NICK_NAME, Const.SIGNATURE, "Secret", "2021年08月08日", "185", "140");
+        UserInfoApi.insertUserInfo(defaultUser, (result: number) => {
+            if (result) {
+                Logger.info('AppEntry', 'Default user inserted successfully');
+            }
+            else {
+                Logger.error('AppEntry', 'Failed to insert default user');
             }
         });
     }

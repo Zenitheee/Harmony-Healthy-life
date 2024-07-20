@@ -34,6 +34,7 @@ export class RdbUtils {
     return new Promise<RdbHelper>((success, error) => {
       let dbName = mDatabaseName;
       if (!dbContext || !dbName || dbName.length === 0) {
+        console.error('init err: Invalid dbContext or dbName');
         error('init err');
         return;
       }
@@ -43,16 +44,18 @@ export class RdbUtils {
         let rdbHelper: RdbHelper = new RdbHelperImp(dbName);
         rdbHelper.getRdb(dbContext).then(data => {
           this.rdbHelpers.set(dbName, data);
+          console.info('Database helper created and data set:', data);
           success(data);
         }).catch((err: Error) => {
+          console.error('Error creating database helper:', err);
           error(err);
-        })
+        });
       } else {
+        console.info('Database helper already exists:', dbHelper);
         success(dbHelper);
       }
-    })
+    });
   }
-
   deleteDb(context: Context, dbName: string): Promise<void> {
     this.rdbHelpers.delete(dbName);
     return relationalStore.deleteRdbStore(context, dbName);

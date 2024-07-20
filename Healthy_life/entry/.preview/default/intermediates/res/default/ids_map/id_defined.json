@@ -755,5 +755,45 @@
 			"type":	"media",
 			"name":	"ic_tabs_mine_sel",
 			"id":	"0x010000BC"
+		}, {
+			"type":	"string",
+			"name":	"backup",
+			"id":	"0x010000BD"
+		}, {
+			"type":	"string",
+			"name":	"change",
+			"id":	"0x010000BE"
+		}, {
+			"type":	"string",
+			"name":	"edit_birthdate",
+			"id":	"0x010000BF"
+		}, {
+			"type":	"string",
+			"name":	"edit_gender",
+			"id":	"0x010000C0"
+		}, {
+			"type":	"string",
+			"name":	"edit_height",
+			"id":	"0x010000C1"
+		}, {
+			"type":	"string",
+			"name":	"edit_nickname",
+			"id":	"0x010000C2"
+		}, {
+			"type":	"string",
+			"name":	"edit_signature",
+			"id":	"0x010000C3"
+		}, {
+			"type":	"string",
+			"name":	"edit_weight",
+			"id":	"0x010000C4"
+		}, {
+			"type":	"string",
+			"name":	"birthdate",
+			"id":	"0x010000C5"
+		}, {
+			"type":	"string",
+			"name":	"gender",
+			"id":	"0x010000C6"
 		}]
 }

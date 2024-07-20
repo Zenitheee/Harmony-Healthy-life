@@ -18,6 +18,7 @@ import TaskInfo from '../../../viewmodel/TaskInfo';
 import { CommonConstants as Const } from '../../constants/CommonConstants';
 import RdbUtils from '../rdb/RdbUtils';
 import Logger from '../../utils/Logger';
+import UserProfile from  '../../../view/UserBaseInfo'
 
 class TaskInfoApi {
   /**
@@ -73,7 +74,8 @@ class TaskInfoApi {
     Logger.info('TaskInfoTable', `Update data {${taskInfo.date}:${taskInfo.taskID}} finished.`);
   }
 
-  /**
+
+    /**
    * query taskInfo
    *
    * @param date
@@ -163,6 +165,7 @@ function generateBucket(taskInfo: TaskInfo): relationalStore.ValuesBucket {
   });
   return valueBucket;
 }
+
 
 let taskInfoApi = new TaskInfoApi();
 
