@@ -1,0 +1,78 @@
+[2024-07-20T19:11:39.166] [DEBUG] debug-file - java daemon tryConnect failed Error: connect ECONNREFUSED ::1:45050
+[2024-07-20T19:11:39.224] [DEBUG] debug-file - java daemon started at port 45050 pid 20520
+[2024-07-20T19:11:40.698] [DEBUG] debug-file - hvigor start cli arguments:{
+  prop: [ 'product=default' ],
+  sync: true,
+  parallel: true,
+  incremental: true,
+  daemon: true,
+  _: [ '--analyze=normal' ]
+}
+[2024-07-20T19:11:40.727] [DEBUG] debug-file - session manager: set active socket. socketId=ypmNDGFwcdb7XJ_bAAAB
+[2024-07-20T19:11:37.215] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2024-07-20T19:11:37.360] [DEBUG] debug-file - env: daemon=true
+[2024-07-20T19:11:37.216] [DEBUG] debug-file - env: hvigor-config.json5 content = { modelVersion: '5.0.0', dependencies: {} }
+[2024-07-20T19:11:40.766] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' }
+}
+[2024-07-20T19:11:40.774] [DEBUG] debug-file - Cache service initialization finished in 9 ms 
+[2024-07-20T19:11:40.789] [DEBUG] debug-file - hvigorfile, resolving C:\Users\98674\Desktop\Healthy_life-master\hvigorfile.ts
+[2024-07-20T19:11:57.516] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2024-07-20T19:11:57.517] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2024-07-20T19:11:57.664] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2024-07-20T19:11:57.664] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2024-07-20T19:11:57.664] [DEBUG] debug-file - Product 'default' build option: {}
+[2024-07-20T19:11:57.664] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2024-07-20T19:11:57.668] [DEBUG] debug-file - Product 'default' using build option: {
+  "debuggable": true
+} in this build.
+[2024-07-20T19:11:57.669] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2024-07-20T19:11:57.675] [DEBUG] debug-file - Local scan or download HarmonyOS sdk components toolchains,ets,js,native
+[2024-07-20T19:11:57.683] [DEBUG] debug-file - Local scan or download hmscore sdk components toolchains,ets,native
+[2024-07-20T19:11:57.696] [DEBUG] debug-file - Sdk init in 25 ms 
+[2024-07-20T19:11:57.722] [DEBUG] debug-file - Project task initialization takes 25 ms 
+[2024-07-20T19:11:57.722] [DEBUG] debug-file - hvigorfile, resolve finished C:\Users\98674\Desktop\Healthy_life-master\hvigorfile.ts
+[2024-07-20T19:11:57.729] [DEBUG] debug-file - hvigorfile, resolving C:\Users\98674\Desktop\Healthy_life-master\entry\hvigorfile.ts
+[2024-07-20T19:11:57.736] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2024-07-20T19:11:57.736] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2024-07-20T19:11:57.745] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2024-07-20T19:11:57.745] [DEBUG] debug-file - Target 'default' config: {}
+[2024-07-20T19:11:57.746] [DEBUG] debug-file - Module 'entry' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2024-07-20T19:11:57.746] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2024-07-20T19:11:57.746] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2024-07-20T19:11:57.752] [DEBUG] debug-file - Module entry task initialization takes 3 ms 
+[2024-07-20T19:11:57.752] [DEBUG] debug-file - hvigorfile, resolve finished C:\Users\98674\Desktop\Healthy_life-master\entry\hvigorfile.ts
+[2024-07-20T19:11:57.794] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 42 ms 
+[2024-07-20T19:11:57.794] [DEBUG] debug-file - project has submodules:entry
+[2024-07-20T19:11:57.795] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2024-07-20T19:11:57.807] [DEBUG] debug-file - load to the disk finished
+[2024-07-20T19:11:57.832] [DEBUG] debug-file - Module Healthy_life-master Collected Dependency: C:\Users\98674\Desktop\Healthy_life-master\oh_modules\.ohpm\cjcalendar@2.0.7\oh_modules\cjcalendar,C:\Users\98674\Desktop\Healthy_life-master\oh_modules\.ohpm\lunar@1.0.0\oh_modules\lunar
+[2024-07-20T19:11:57.832] [DEBUG] debug-file - Module Healthy_life-master's total dependency: 2
+[2024-07-20T19:11:57.849] [DEBUG] debug-file - Module entry Collected Dependency: C:\Users\98674\Desktop\Healthy_life-master\oh_modules\.ohpm\cjcalendar@2.0.7\oh_modules\cjcalendar,C:\Users\98674\Desktop\Healthy_life-master\oh_modules\.ohpm\lunar@1.0.0\oh_modules\lunar
+[2024-07-20T19:11:57.849] [DEBUG] debug-file - Module entry's total dependency: 2
+[2024-07-20T19:11:57.855] [DEBUG] debug-file - Configuration phase cost:17 s 74 ms 
+[2024-07-20T19:11:57.856] [DEBUG] debug-file - Configuration task cost before running: 17 s 105 ms 
+[2024-07-20T19:11:57.856] [DEBUG] debug-file - Executing task :entry:init
+[2024-07-20T19:11:57.857] [DEBUG] debug-file - entry : init cost memory 0.01779937744140625
+[2024-07-20T19:11:57.857] [DEBUG] debug-file - runTaskFromQueue task cost before running: 17 s 106 ms 
+[2024-07-20T19:11:57.857] [INFO] debug-file - Finished :entry:init... after 1 ms 
+[2024-07-20T19:11:57.857] [DEBUG] debug-file - Executing task ::init
+[2024-07-20T19:11:57.857] [DEBUG] debug-file - Healthy_life-master : init cost memory 0.01238250732421875
+[2024-07-20T19:11:57.857] [DEBUG] debug-file - runTaskFromQueue task cost before running: 17 s 107 ms 
+[2024-07-20T19:11:57.857] [INFO] debug-file - Finished ::init... after 1 ms 
+[2024-07-20T19:11:57.873] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
