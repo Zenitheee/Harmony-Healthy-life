@@ -31,11 +31,64 @@ export struct BadgePanel {
   }
 
   build() {
-    Flex({ direction: FlexDirection.Row, wrap: FlexWrap.Wrap }) {
-      ForEach(getBadgeCardItems(this.successiveDays), (item: CardInfo) => {
-        BadgeCard({ content: item.titleContent, imgSrc: item.achievement })
-      })
+    Scroll() {
+      Flex({ direction: FlexDirection.Column, wrap: FlexWrap.Wrap }) {
+        Flex({ direction: FlexDirection.Row, wrap: FlexWrap.Wrap }) {
+          ForEach(getBadgeCardItems(this.successiveDays), (item: CardInfo) => {
+            BadgeCard({ content: item.titleContent, imgSrc: item.achievement })
+          })
+        }
+        .width(Const.FULL_WIDTH)
+
+
+        Row() {
+          // New Section 1
+          Column({ space: Const.DEFAULT_18 }) {
+            Image($r('app.media.ic_badge_hide'))
+              .width(Const.FULL_WIDTH)
+              .height(Const.ACHIEVE_CARD_IMG_HEIGHT)
+              .objectFit(ImageFit.Contain)
+            Text($r('app.string.task_achievement_hide'))
+              .lineHeight($r('app.float.default_16'))
+              .fontSize($r('app.float.default_12'))
+              .fontColor($r('app.color.white'))
+          }
+          .padding({ top: Const.ACHIEVE_CARD_TOP, bottom: Const.ACHIEVE_CARD_BOTTOM })
+          .width('33%')
+
+          // New Section 2
+          Column({ space: Const.DEFAULT_18 }) {
+            Image($r('app.media.ic_badge_hide'))
+              .width(Const.FULL_WIDTH)
+              .height(Const.ACHIEVE_CARD_IMG_HEIGHT)
+              .objectFit(ImageFit.Contain)
+            Text($r('app.string.task_achievement_hide'))
+              .lineHeight($r('app.float.default_16'))
+              .fontSize($r('app.float.default_12'))
+              .fontColor($r('app.color.white'))
+          }
+          .padding({ top: Const.ACHIEVE_CARD_TOP, bottom: Const.ACHIEVE_CARD_BOTTOM })
+          .width('33%')
+
+          // New Section 3
+          Column({ space: Const.DEFAULT_18 }) {
+            Image($r('app.media.ic_badge_hide'))
+              .width(Const.FULL_WIDTH)
+              .height(Const.ACHIEVE_CARD_IMG_HEIGHT)
+              .objectFit(ImageFit.Contain)
+            Text($r('app.string.task_achievement_hide'))
+              .lineHeight($r('app.float.default_16'))
+              .fontSize($r('app.float.default_12'))
+              .fontColor($r('app.color.white'))
+          }
+          .padding({ top: Const.ACHIEVE_CARD_TOP, bottom: Const.ACHIEVE_CARD_BOTTOM })
+          .width('33%')
+        }
+        .width('100%').justifyContent(FlexAlign.SpaceAround)
+      }
+      .width(Const.FULL_WIDTH)
+
+
     }
-    .width(Const.FULL_WIDTH)
   }
 }

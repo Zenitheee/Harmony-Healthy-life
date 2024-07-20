@@ -13,27 +13,26 @@
  * limitations under the License.
  */
 
-import { ratio2percent } from '../common/utils/Utils'
+import TaskDetail from '../view/task/TaskDetailComponent';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 
+@Entry
 @Component
-export struct BadgeCard {
-  @Prop content: string = '';
-  imgSrc: Resource = $r('app.string.empty');
-
+struct TaskEdit {
   build() {
-    Column({ space: Const.DEFAULT_18 }) {
-      Image(this.imgSrc)
-        .width(Const.FULL_WIDTH)
-        .height(Const.ACHIEVE_CARD_IMG_HEIGHT)
-        .objectFit(ImageFit.Contain)
-      Text($r('app.string.task_achievement_level', Number(this.content)))
-        .lineHeight($r('app.float.default_16'))
-        .fontSize($r('app.float.default_12'))
-        .fontColor($r('app.color.white'))
+    Row() {
+      Navigation() {
+        Column() {
+          TaskDetail()
+        }
+        .width(Const.THOUSANDTH_1000)
+        .height(Const.THOUSANDTH_1000)
+      }
+      .size({ width: Const.THOUSANDTH_1000, height: Const.THOUSANDTH_1000 })
+      .title(Const.EDIT_TASK_TITLE)
+      .titleMode(NavigationTitleMode.Mini)
     }
-    .width(ratio2percent(Const.ACHIEVE_SPLIT_RATIO))
-    .padding({ top: Const.ACHIEVE_CARD_TOP, bottom: Const.ACHIEVE_CARD_BOTTOM })
+    .height(Const.THOUSANDTH_1000)
+    .backgroundColor($r('app.color.primaryBgColor'))
   }
 }
-

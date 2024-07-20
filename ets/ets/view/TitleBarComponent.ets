@@ -12,28 +12,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import { ratio2percent } from '../common/utils/Utils'
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 
 @Component
-export struct BadgeCard {
-  @Prop content: string = '';
-  imgSrc: Resource = $r('app.string.empty');
-
+export struct TitleBar {
   build() {
-    Column({ space: Const.DEFAULT_18 }) {
-      Image(this.imgSrc)
-        .width(Const.FULL_WIDTH)
-        .height(Const.ACHIEVE_CARD_IMG_HEIGHT)
-        .objectFit(ImageFit.Contain)
-      Text($r('app.string.task_achievement_level', Number(this.content)))
-        .lineHeight($r('app.float.default_16'))
-        .fontSize($r('app.float.default_12'))
+    Row() {
+      Text($r('app.string.achievement'))
+        .fontSize($r('app.float.default_24'))
         .fontColor($r('app.color.white'))
+        .align(Alignment.Start)
+        .padding({ left: Const.ACHIEVE_TITLE_BAR_LEFT, top: Const.ACHIEVE_TITLE_BAR_TOP })
     }
-    .width(ratio2percent(Const.ACHIEVE_SPLIT_RATIO))
-    .padding({ top: Const.ACHIEVE_CARD_TOP, bottom: Const.ACHIEVE_CARD_BOTTOM })
+    .width(Const.FULL_WIDTH)
   }
 }
-

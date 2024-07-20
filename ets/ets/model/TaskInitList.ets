@@ -25,7 +25,6 @@ export interface ITaskItem {
   icon: Resource;
   dialogBg: Resource;
   targetValue: string;
-  finValue: string;
   isAlarm: boolean;
   startTime: string;
   endTime: string;
@@ -65,9 +64,8 @@ export const TaskMapById: Array<ITaskItem> = [
     icon: $r("app.media.ic_task_morning"),
     dialogBg: $r('app.media.ic_dialog_getup'),
     targetValue: '08: 00',
-    finValue:'',
     isOpen: false,
-    isDone:false,
+    isDone: false,//add
     unit: '',
     step: 0,
     isInit: true,
@@ -82,9 +80,8 @@ export const TaskMapById: Array<ITaskItem> = [
     icon: $r("app.media.ic_task_water"),
     dialogBg: $r('app.media.ic_dialog_drink'),
     targetValue: '0.25',
-    finValue:'',
     isOpen: false,
-    isDone:false,
+    isDone: false,//add
     unit: 'L',
     step: 0,
     isInit: true,
@@ -99,9 +96,8 @@ export const TaskMapById: Array<ITaskItem> = [
     icon: $r("app.media.ic_task_apple"),
     dialogBg: $r('app.media.ic_dialog_eat_apples'),
     targetValue: '1',
-    finValue:'',
     isOpen: false,
-    isDone:false,
+    isDone: false,//add
     unit: '个',
     step: 1,
     isInit: true,
@@ -116,9 +112,8 @@ export const TaskMapById: Array<ITaskItem> = [
     icon: $r("app.media.ic_task_smile"),
     dialogBg: $r('app.media.ic_dialog_smile'),
     targetValue: '1',
-    finValue:'',
     isOpen: false,
-    isDone:false,
+    isDone: false,//add
     unit: '次',
     step: 0,
     isInit: true,
@@ -133,9 +128,8 @@ export const TaskMapById: Array<ITaskItem> = [
     icon: $r("app.media.ic_task_brush"),
     dialogBg: $r('app.media.ic_dialog_brush_teeth'),
     targetValue: '1',
-    finValue:'',
     isOpen: false,
-    isDone:false,
+    isDone: false,
     unit: '次',
     step: 0,
     isInit: true,
@@ -150,9 +144,8 @@ export const TaskMapById: Array<ITaskItem> = [
     icon: $r("app.media.ic_task_night"),
     dialogBg: $r('app.media.ic_dialog_sleep'),
     targetValue: '20: 00',
-    finValue:'',
     isOpen: false,
-    isDone:false,
+    isDone: false,
     unit: '',
     step: 0,
     isInit: true,
@@ -192,4 +185,4 @@ export const RemindContentMap: Array<RemindContentItem> = [
   }
 ];
 
-export const ACHIEVEMENT_LEVEL_LIST = [3, 7, 15, 30, 50, 73, 99,180,365];
+export const ACHIEVEMENT_LEVEL_LIST = [3, 7, 30, 50, 73, 99];

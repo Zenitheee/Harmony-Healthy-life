@@ -13,27 +13,22 @@
  * limitations under the License.
  */
 
-import { ratio2percent } from '../common/utils/Utils'
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 
 @Component
-export struct BadgeCard {
-  @Prop content: string = '';
-  imgSrc: Resource = $r('app.string.empty');
+export default struct HealthText {
+  @Prop title: string = '';
+  titleResource: Resource = $r('app.string.empty');
+  fontSize: number | string | Resource = $r('app.float.default_16');
+  fontWeight: number | FontWeight | string = Const.FONT_WEIGHT_500;
+  fontColor: ResourceColor = $r('app.color.titleColor');
+  fontFamily: string | Resource = $r('app.string.HarmonyHeiTi_Medium');
 
   build() {
-    Column({ space: Const.DEFAULT_18 }) {
-      Image(this.imgSrc)
-        .width(Const.FULL_WIDTH)
-        .height(Const.ACHIEVE_CARD_IMG_HEIGHT)
-        .objectFit(ImageFit.Contain)
-      Text($r('app.string.task_achievement_level', Number(this.content)))
-        .lineHeight($r('app.float.default_16'))
-        .fontSize($r('app.float.default_12'))
-        .fontColor($r('app.color.white'))
-    }
-    .width(ratio2percent(Const.ACHIEVE_SPLIT_RATIO))
-    .padding({ top: Const.ACHIEVE_CARD_TOP, bottom: Const.ACHIEVE_CARD_BOTTOM })
+    Text(this.title || this.titleResource)
+      .fontSize(this.fontSize)
+      .fontWeight(this.fontWeight)
+      .fontColor(this.fontColor)
+      .fontFamily(this.fontFamily)
   }
 }
-

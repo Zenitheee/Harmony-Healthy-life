@@ -13,27 +13,25 @@
  * limitations under the License.
  */
 
-import { ratio2percent } from '../common/utils/Utils'
+import { ListInfo } from '../view/ListInfo';
+import { UserBaseInfo } from '../view/UserBaseInfo';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 
 @Component
-export struct BadgeCard {
-  @Prop content: string = '';
-  imgSrc: Resource = $r('app.string.empty');
+export struct MineIndex {
+  @State nickname: string = Const.NICK_NAME;
+  @State signature: string = Const.SIGNATURE;
 
   build() {
-    Column({ space: Const.DEFAULT_18 }) {
-      Image(this.imgSrc)
-        .width(Const.FULL_WIDTH)
-        .height(Const.ACHIEVE_CARD_IMG_HEIGHT)
-        .objectFit(ImageFit.Contain)
-      Text($r('app.string.task_achievement_level', Number(this.content)))
-        .lineHeight($r('app.float.default_16'))
-        .fontSize($r('app.float.default_12'))
-        .fontColor($r('app.color.white'))
+    Column() {
+      UserBaseInfo({
+        nickname: this.nickname,
+        signature: this.signature
+      });
+
+      ListInfo();
     }
-    .width(ratio2percent(Const.ACHIEVE_SPLIT_RATIO))
-    .padding({ top: Const.ACHIEVE_CARD_TOP, bottom: Const.ACHIEVE_CARD_BOTTOM })
+    .height(Const.FULL_HEIGHT)
+    .backgroundColor($r('app.color.mineBgColor'))
   }
 }
-

@@ -13,27 +13,29 @@
  * limitations under the License.
  */
 
-import { ratio2percent } from '../common/utils/Utils'
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
+import { BadgePanel } from './BadgePanelComponent';
+import { TitleBar } from './TitleBarComponent';
+import Logger from '../common/utils/Logger';
 
 @Component
-export struct BadgeCard {
-  @Prop content: string = '';
-  imgSrc: Resource = $r('app.string.empty');
+export struct AchievementIndex {
+  aboutToAppear() {
+    Logger.debug('AchievementIndex', 'aboutToAppear')
+  }
+
+  onPageShow() {
+    Logger.debug('AchievementIndex', 'onPageShow')
+  }
 
   build() {
-    Column({ space: Const.DEFAULT_18 }) {
-      Image(this.imgSrc)
-        .width(Const.FULL_WIDTH)
-        .height(Const.ACHIEVE_CARD_IMG_HEIGHT)
-        .objectFit(ImageFit.Contain)
-      Text($r('app.string.task_achievement_level', Number(this.content)))
-        .lineHeight($r('app.float.default_16'))
-        .fontSize($r('app.float.default_12'))
-        .fontColor($r('app.color.white'))
+    Column({ space: Const.DEFAULT_20 }) {
+      TitleBar()
+      BadgePanel()
     }
-    .width(ratio2percent(Const.ACHIEVE_SPLIT_RATIO))
-    .padding({ top: Const.ACHIEVE_CARD_TOP, bottom: Const.ACHIEVE_CARD_BOTTOM })
+    .padding(Const.DEFAULT_10)
+    .height(Const.FULL_HEIGHT)
+    .width(Const.FULL_WIDTH)
+    .backgroundColor($r('app.color.black'))
   }
 }
-

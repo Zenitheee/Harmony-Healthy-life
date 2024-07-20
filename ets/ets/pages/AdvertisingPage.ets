@@ -39,6 +39,22 @@ struct AdvertisingPage {
 
   build() {
     Column() {
+      /*Row() {
+        Text($r('app.string.jump_ad', this.duration))
+          .fontSize($r('app.float.default_12'))
+          .fontColor($r('app.color.white'))
+          .borderRadius($r('app.float.default_16'))
+          .letterSpacing(Const.LETTER_1)
+          .height($r('app.float.default_36'))
+          .backgroundColor('rgba(0,0,0,0.20)')
+          .border({ color: $r('app.color.white'), width: $r('app.float.default_1') })
+          .margin({ top: $r('app.float.default_36') })
+          .padding($r('app.float.default_8'))
+          .onClick(() => this.goToHomePage())
+      }
+      .width('90%')
+      .justifyContent(FlexAlign.End)
+*/
       Row() {
         Image($r('app.media.logo'))
           .width($r('app.float.default_56'))

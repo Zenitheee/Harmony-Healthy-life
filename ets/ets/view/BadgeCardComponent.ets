@@ -36,4 +36,3 @@ export struct BadgeCard {
     .padding({ top: Const.ACHIEVE_CARD_TOP, bottom: Const.ACHIEVE_CARD_BOTTOM })
   }
 }
-
