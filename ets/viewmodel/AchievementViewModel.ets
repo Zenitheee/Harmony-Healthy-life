@@ -44,6 +44,12 @@ function getAchievement(key: string) {
     case 'on_7':
       result = AchievementMap.on_7;
       break;
+    case 'off_15':
+      result = AchievementMap.off_15;
+      break;
+    case 'on_15':
+      result = AchievementMap.on_15;
+      break;
     case 'off_30':
       result = AchievementMap.off_30;
       break;
@@ -67,6 +73,18 @@ function getAchievement(key: string) {
       break;
     case 'on_99':
       result = AchievementMap.on_99;
+      break;
+    case 'off_180':
+      result = AchievementMap.off_180;
+      break;
+    case 'on_180':
+      result = AchievementMap.on_180;
+      break;
+    case 'off_365':
+      result = AchievementMap.off_365;
+      break;
+    case 'on_365':
+      result = AchievementMap.on_365;
       break;
     default:
       break;

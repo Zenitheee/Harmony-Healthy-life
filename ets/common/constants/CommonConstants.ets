@@ -99,8 +99,8 @@ export class CommonConstants {
   // radius
   static readonly BORDER_RADIUS_PERCENT_50: string = '50%';
   // duration
-  static readonly AD_DURATION: number = 0; // 5s
-  static readonly LAUNCHER_DELAY_TIME: number = 0; // 2000ms
+  static readonly AD_DURATION: number = 0; // 0
+  static readonly LAUNCHER_DELAY_TIME: number = 0; // 0
   static readonly DURATION_1000: number = 1000; // 1000ms
   static readonly DURATION_800: number = 800; // 700ms
   static readonly DURATION_100: number = 100; // 100ms
