@@ -56,15 +56,10 @@ interface MonthCalendar_Params {
     disableCellClick?: (item: DateItem) => void;
 }
 import router from "@ohos:router";
-import { initializeOnStartUp } from "@bundle:com.example.healthy_life/entry/ets/model/WeekCalendarModel";
 import { dateToStr } from "@bundle:com.example.healthy_life/entry/ets/common/utils/Utils";
 import { CommonConstants as Const } from "@bundle:com.example.healthy_life/entry/ets/common/constants/CommonConstants";
-import Logger from "@bundle:com.example.healthy_life/entry/ets/common/utils/Logger";
-import DatabaseApi from "@bundle:com.example.healthy_life/entry/ets/model/DatabaseModel";
-import type TaskInfo from '../viewmodel/TaskInfo';
-import DayInfo from "@bundle:com.example.healthy_life/entry/ets/viewmodel/DayInfo";
+import type DayInfo from '../viewmodel/DayInfo';
 import DayInfoApi from "@bundle:com.example.healthy_life/entry/ets/common/database/tables/DayInfoApi";
-import type WeekCalendarInfo from '../viewmodel/WeekCalendarInfo';
 @Observed
 export class DateItem {
     fullYear: number = 2024;
@@ -423,32 +418,39 @@ class MonthCalendar extends ViewPU {
         }, Text);
         Text.pop();
     }
-    public isFinished(today: DateItem): number {
+    public isFinished(date: DateItem): number {
         let currentDate = new Date();
-        currentDate.setDate(today.date);
-        currentDate.setMonth(today.month);
-        currentDate.setTime(today.time);
-        currentDate.setFullYear(today.fullYear);
-        let weekCalendarInfo: WeekCalendarInfo = initializeOnStartUp(currentDate);
-        let dateArr = weekCalendarInfo.arr;
+        let dateStr = dateToStr(currentDate);
         let flag = 0;
-        // get data form db
-        DatabaseApi.query(dateToStr(new Date()), (taskList: TaskInfo[], dayInfo: DayInfo) => {
-            Logger.info('Current Day Task Info: ', JSON.stringify(taskList));
-            DayInfoApi.queryList(weekCalendarInfo.strArr, (res: DayInfo[]) => {
-                let tempList = res.concat(dayInfo);
-                Logger.info('initDayInfoList: ', JSON.stringify(res));
-                for (let i = 0; i < dateArr.length; i++) {
-                    let tempDayInfo = tempList.find((item: DayInfo) => item.date === dateArr[i].dateStr)
-                        || new DayInfo(dateArr[i].dateStr, 0, 0, false);
-                    weekCalendarInfo.arr[i].dayInfo = tempDayInfo;
-                    if (tempDayInfo.targetTaskNum == tempDayInfo.targetTaskNum && String(currentDate.getDate()) == tempDayInfo.date) {
+        if (currentDate.getDate() == date.date) {
+            DayInfoApi.query(dateStr, (dayInfo: DayInfo) => {
+                if (dayInfo) {
+                    if (dayInfo.finTaskNum == dayInfo.targetTaskNum) {
                         flag = 1;
                     }
-                    weekCalendarInfo.arr[i].taskList = taskList;
+                    else {
+                        flag = 0;
+                    }
                 }
-                dateArr = weekCalendarInfo.arr;
+                flag = 0;
             });
+            return flag;
+        }
+        currentDate.setDate(date.date);
+        currentDate.setMonth(date.month);
+        currentDate.setTime(date.time);
+        currentDate.setFullYear(date.fullYear);
+        dateStr = dateToStr(currentDate);
+        DayInfoApi.query(dateStr, (dayInfo: DayInfo) => {
+            if (dayInfo) {
+                if (dayInfo.finTaskNum == dayInfo.targetTaskNum) {
+                    flag = 1;
+                }
+                else {
+                    flag = 0;
+                }
+            }
+            flag = 0;
         });
         return flag;
     }

@@ -134,8 +134,8 @@ export default struct HomeIndex {
                 })
                   .height($r('app.float.default_64'))
                 Progress({
-                  value:Number(item.finValue),
-                  total:Number(item.targetValue),
+                  value:item.isDone ? 1 : Number(item.finValue),
+                  total:item.isDone ? 1 : Number(item.targetValue),
                   type:ProgressType.Linear
                 })
                   .margin({ bottom: Const.DEFAULT_12 })

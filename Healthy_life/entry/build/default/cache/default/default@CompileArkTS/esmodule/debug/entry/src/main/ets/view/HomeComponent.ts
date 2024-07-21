@@ -276,8 +276,8 @@ export default class HomeIndex extends ViewPU {
                             __Common__.pop();
                             this.observeComponentCreation2((elmtId, isInitialRender) => {
                                 Progress.create({
-                                    value: Number(item.finValue),
-                                    total: Number(item.targetValue),
+                                    value: item.isDone ? 1 : Number(item.finValue),
+                                    total: item.isDone ? 1 : Number(item.targetValue),
                                     type: ProgressType.Linear
                                 });
                                 Progress.margin({ bottom: Const.DEFAULT_12 });

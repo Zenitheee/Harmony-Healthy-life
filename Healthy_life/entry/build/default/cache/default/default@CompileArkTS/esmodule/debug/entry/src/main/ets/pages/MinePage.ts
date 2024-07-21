@@ -5,7 +5,7 @@ interface MineIndex_Params {
     nickname?: string;
     signature?: string;
 }
-import { ListInfo, ExitLogin } from "@bundle:com.example.healthy_life/entry/ets/view/ListInfo";
+import { ListInfo } from "@bundle:com.example.healthy_life/entry/ets/view/ListInfo";
 import { UserBaseInfo } from "@bundle:com.example.healthy_life/entry/ets/view/UserBaseInfo";
 import { CommonConstants as Const } from "@bundle:com.example.healthy_life/entry/ets/common/constants/CommonConstants";
 export class MineIndex extends ViewPU {
@@ -97,25 +97,6 @@ export class MineIndex extends ViewPU {
                     this.updateStateVarsOfChildByElmtId(elmtId, {});
                 }
             }, { name: "ListInfo" });
-        }
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Blank.create();
-        }, Blank);
-        Blank.pop();
-        {
-            this.observeComponentCreation2((elmtId, isInitialRender) => {
-                if (isInitialRender) {
-                    let componentCall = new ExitLogin(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/MinePage.ets", line: 34 });
-                    ViewPU.create(componentCall);
-                    let paramsLambda = () => {
-                        return {};
-                    };
-                    componentCall.paramsGenerator_ = paramsLambda;
-                }
-                else {
-                    this.updateStateVarsOfChildByElmtId(elmtId, {});
-                }
-            }, { name: "ExitLogin" });
         }
         Column.pop();
     }

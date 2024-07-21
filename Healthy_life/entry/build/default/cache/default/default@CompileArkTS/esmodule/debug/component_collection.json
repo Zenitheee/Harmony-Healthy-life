@@ -181,8 +181,7 @@
     "Text"
   ],
   "entry\\src\\main\\ets\\pages\\MinePage.ets": [
-    "Column",
-    "Blank"
+    "Column"
   ],
   "entry\\src\\main\\ets\\view\\ListInfo.ets": [
     "List",

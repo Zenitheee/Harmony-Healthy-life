@@ -146,34 +146,40 @@ struct MonthCalendar {
       .layoutWeight(1)
   }
 
-  public isFinished(today: DateItem): number {
+  public isFinished(date: DateItem): number {
     let currentDate = new Date()
-    currentDate.setDate(today.date)
-    currentDate.setMonth(today.month)
-    currentDate.setTime(today.time)
-    currentDate.setFullYear(today.fullYear)
-    let weekCalendarInfo: WeekCalendarInfo = initializeOnStartUp(currentDate);
-    let dateArr = weekCalendarInfo.arr;
+    let dateStr = dateToStr(currentDate);
     let flag = 0;
-    // get data form db
-    DatabaseApi.query(dateToStr(new Date()), (taskList: TaskInfo[], dayInfo: DayInfo) => {
-      Logger.info('Current Day Task Info: ', JSON.stringify(taskList));
-      DayInfoApi.queryList(weekCalendarInfo.strArr, (res: DayInfo[]) => {
-        let tempList = res.concat(dayInfo);
-        Logger.info('initDayInfoList: ', JSON.stringify(res));
-        for (let i = 0; i < dateArr.length; i++) {
-          let tempDayInfo = tempList.find((item: DayInfo) => item.date === dateArr[i].dateStr)
-            || new DayInfo(dateArr[i].dateStr, 0, 0, false);
-          weekCalendarInfo.arr[i].dayInfo = tempDayInfo;
-          if (tempDayInfo.targetTaskNum == tempDayInfo.targetTaskNum && String(currentDate.getDate()) == tempDayInfo.date) {
-            flag = 1
+    if (currentDate.getDate() == date.date) {
+      DayInfoApi.query(dateStr, (dayInfo: DayInfo) => {
+        if (dayInfo) {
+          if(dayInfo.finTaskNum == dayInfo.targetTaskNum) {
+            flag = 1;
+          } else {
+            flag = 0;
           }
-          weekCalendarInfo.arr[i].taskList = taskList;
         }
-        dateArr = weekCalendarInfo.arr;
-      })
-    })
-    return flag
+        flag = 0;
+      });
+      return flag;
+    }
+
+    currentDate.setDate(date.date)
+    currentDate.setMonth(date.month)
+    currentDate.setTime(date.time)
+    currentDate.setFullYear(date.fullYear)
+    dateStr = dateToStr(currentDate);
+    DayInfoApi.query(dateStr, (dayInfo: DayInfo) => {
+      if (dayInfo) {
+        if(dayInfo.finTaskNum == dayInfo.targetTaskNum) {
+          flag = 1;
+        } else {
+          flag = 0;
+        }
+      }
+      flag = 0;
+    });
+    return flag;
   }
 
   @Builder createCell() {

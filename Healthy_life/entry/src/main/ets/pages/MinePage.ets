@@ -30,8 +30,6 @@ export struct MineIndex {
       });
 
       ListInfo();
-      Blank();
-      ExitLogin();
 
     }
     .height(Const.FULL_HEIGHT)
